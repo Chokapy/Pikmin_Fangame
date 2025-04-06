@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Cursor_AI : MonoBehaviour
 {
+    void Start()
+    {
+        Cursor.visible = false;
+    }
 
     // FixedUpdate is called 50 times per second
     void FixedUpdate()
