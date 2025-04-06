@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2151436279891804980}
   - component: {fileID: 3125734847562313298}
   - component: {fileID: 1067722481167990975}
+  - component: {fileID: -7061179898693592319}
   m_Layer: 0
   m_Name: Yellow_Pikmin
-  m_TagString: Untagged
+  m_TagString: Pikmin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,3 +153,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-7061179898693592319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393496482185432214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c161b190c6e0e8148837a5dd3f18fa52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  followSpeed: 5
+  stopDistance: 1
