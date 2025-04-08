@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -309,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Olimar_0: -2947291489666322639
+      Olimar_1: 5829017605431495793
+      Olimar_2: 5689437730274824420
+      Olimar_3: 6383588891637443007
+      Olimar_4: 8044518443845883894
+      Olimar_5: 8253343797281798420
+      Olimar_6: -7942848126302508849
+      Olimar_7: 712779901091940879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
