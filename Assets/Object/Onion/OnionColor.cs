@@ -1,11 +1,13 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.PlayerSettings.WSA;
 
 public class OnionColor : MonoBehaviour
 {
     public Animator animator;
     private Variables variables;
+    public Material material;
+    public List<string> HexColors = new List<string>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,47 +19,62 @@ public class OnionColor : MonoBehaviour
     void Update()
     {
         int Count = -1;
+        HexColors.Clear();
 
-        bool red = (bool)variables.declarations.Get("Red");
-        bool yellow = (bool)variables.declarations.Get("Yellow");
-        bool blue = (bool)variables.declarations.Get("Blue");
-        bool rock = (bool)variables.declarations.Get("Rock");
-        bool winged = (bool)variables.declarations.Get("Winged");
-        bool purple = (bool)variables.declarations.Get("Purple");
-        bool white = (bool)variables.declarations.Get("White");
-        bool ice = (bool)variables.declarations.Get("Ice");
+        if ((bool)variables.declarations.Get("Red"))
+        {
+            HexColors.Add("#FF0000");
+            Count++;
+        }
 
-        if (red)
+        if ((bool)variables.declarations.Get("Yellow"))
         {
+            HexColors.Add("#FFFF00");
             Count++;
         }
-        if (yellow)
+
+        if ((bool)variables.declarations.Get("Blue"))
         {
+            HexColors.Add("#0000FF");
             Count++;
         }
-        if (blue)
+
+        if ((bool)variables.declarations.Get("Rock"))
         {
+            HexColors.Add("#575757");
             Count++;
         }
-        if (rock)
+
+        if ((bool)variables.declarations.Get("Winged"))
         {
+            HexColors.Add("#ff00dd");
             Count++;
         }
-        if (winged)
+
+        if ((bool)variables.declarations.Get("Purple"))
         {
+            HexColors.Add("#8800ff");
             Count++;
         }
-        if (purple)
+
+        if ((bool)variables.declarations.Get("White"))
         {
+            HexColors.Add("#cccccc");
             Count++;
         }
-        if (white)
+
+        if ((bool)variables.declarations.Get("Ice"))
         {
+            HexColors.Add("#00aaff");
             Count++;
         }
-        if (ice)
+
+        for (int i = 0; i < HexColors.Count; i++)
         {
-            Count++;
+            if (UnityEngine.ColorUtility.TryParseHtmlString(HexColors[i], out Color color))
+            {
+                material.SetColor($"_TargetColor{i + 1}", color);
+            }
         }
 
         animator.SetFloat("Level", Count);
